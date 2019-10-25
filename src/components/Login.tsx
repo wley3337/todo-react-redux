@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../redux/actions'
 import { AppState } from '../redux/reducer'
 import { Link, RouteComponentProps } from 'react-router-dom'
-import { loginFormType } from '../redux/LoginForm/LoginForm.types'
+import { loginFormType } from '../redux/LoginForm.redux/LoginForm.types'
 import { History } from 'history'
 
 

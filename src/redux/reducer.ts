@@ -1,13 +1,12 @@
 import { combineReducers } from 'redux';
-
-const itWorks: any = (state: AppState) =>{
- return true
-}
+import { user } from './User.redux/User.reducers'
+import { lists } from './Lists.redux/Lists.reducer'
 
 
 
 const reducers = combineReducers({
-    itWorks
+    user,
+    lists
 })
 
 export default reducers;
