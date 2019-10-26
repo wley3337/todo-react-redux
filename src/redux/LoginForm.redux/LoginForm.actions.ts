@@ -3,7 +3,7 @@ import { History } from 'history';
 import { AppState } from "../reducer";
 import { ThunkAction } from "redux-thunk";
 import { AnyAction } from 'redux';
-import { BASE_URL } from "../actions";
+import { BASE_URL, setUser, setLists } from "../actions";
 
 
 export const loginUser = (loginForm: loginFormType, history: History): ThunkAction<Promise<void>, AppState, null, AnyAction> => async(dispatch) =>{
@@ -22,6 +22,8 @@ export const loginUser = (loginForm: loginFormType, history: History): ThunkActi
         if(resObj.success){
             localStorage.setItem('ToDo-token', resObj.token)
             //set the user here
+            dispatch(setUser(resObj.user.user))
+            dispatch(setLists(resObj.user.lists))
             history.push('/dashboard')
         }
         if(!resObj.success){

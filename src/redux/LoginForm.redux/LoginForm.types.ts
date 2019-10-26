@@ -9,4 +9,3 @@ export interface loginUser {
     type: typeof LOGIN_USER,
     payload: loginFormType
 }
-
