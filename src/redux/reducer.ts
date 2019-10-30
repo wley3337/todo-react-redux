@@ -2,8 +2,6 @@ import { combineReducers } from 'redux';
 import { user } from './User.redux/User.reducers'
 import { lists } from './Lists.redux/Lists.reducer'
 
-
-
 const reducers = combineReducers({
     user,
     lists
