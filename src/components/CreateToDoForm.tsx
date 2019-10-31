@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import { AppState } from '../redux/reducer';
 import { ToDo } from '../redux/ToDos.redux/ToDos.types';
+import moment from 'moment'
 
 interface CreateToDoFormProps{
     //own props
@@ -16,8 +17,8 @@ const CreateToDoForm: React.FC<CreateToDoFormProps> = ({ handleCreateToDo, listI
     const initialNewToDoState: ToDo = {
         title: "",
         description: "",
-        due: Date.now().toTimeString(),
-        listId: listId
+        due: moment(Date.now()).format('YYYY/MM/DD'),
+        listId: listId 
     } 
 
     const [newToDo, setNewToDo] = useState(initialNewToDoState)
@@ -44,6 +45,7 @@ const CreateToDoForm: React.FC<CreateToDoFormProps> = ({ handleCreateToDo, listI
                 placeholder="Description"
                 name="Description"
             />
+            <input type="submit" value="create"/>
         </form>
             )
 }

@@ -13,7 +13,7 @@ export const handleCreateToDo = (toDo: ToDo): ThunkAction<Promise<void>, AppStat
             Accept: "application/json",
             Authorization: `Bearer ${token}`
         },
-        body: JSON.stringify({ toDo: toDo })
+        body: JSON.stringify({ to_do: toDo })
     }
 
     try{
