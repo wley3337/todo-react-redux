@@ -4,7 +4,7 @@ import * as actions from '../redux/actions';
 import { AppState } from '../redux/reducer';
 import { ListType } from '../redux/Lists.redux/Lists.types';
 import ListDetail from '../components/ListDetail';
-import CreateListForm from './CreateListForm'
+import CreateListForm from '../components/CreateListForm'
 
 interface BoardsProps{
     //state

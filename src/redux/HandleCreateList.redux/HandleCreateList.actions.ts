@@ -29,7 +29,7 @@ export const handleCreateList = (createListForm: CreateListFormType): ThunkActio
         }
     }
     catch(err){
-        console.error("Login User: ", err)
+        console.error("Create List: ", err)
     }
 }
 
