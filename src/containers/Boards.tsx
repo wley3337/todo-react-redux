@@ -13,7 +13,7 @@ interface BoardsProps{
 
 const Boards: React.FC<BoardsProps> = ({ lists }) =>{
     return(
-        <div>
+        <div style={{'display': "flex"}}>
             {lists.map(list => <ListDetail key={list.id} list={list}/>)}
             <CreateListForm />
         </div>
